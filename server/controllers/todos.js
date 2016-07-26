@@ -61,9 +61,9 @@ module.exports = {
             title: req.body.title || todo.title,
           })
           .then(() => res.status(200).send(todo))
-          .catch((error) => res.send(res, error));
+          .catch((error) => res.status(400).send(error));
       })
-      .catch((error) => res.send(res, error));
+      .catch((error) => res.status(400).send(error));
   },
 
   destroy(req, res) {
