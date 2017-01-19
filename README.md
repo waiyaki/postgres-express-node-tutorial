@@ -1,4 +1,4 @@
-# Getting Started With Node, Express and Postgres (using Sequelize) - https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize
+# Getting Started With Node, Express and Postgres (using Sequelize)
 
 This repo houses code for the blog ["Getting Started with Node, Express and Postgres (using Sequelize)"](https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize)
 
