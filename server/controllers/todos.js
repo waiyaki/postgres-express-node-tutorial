@@ -18,6 +18,10 @@ module.exports = {
           model: TodoItem,
           as: 'todoItems',
         }],
+        order: [
+          ['createdAt', 'DESC'],
+          [{ model: TodoItem, as: 'todoItems' }, 'createdAt', 'ASC'],
+        ],
       })
       .then((todos) => res.status(200).send(todos))
       .catch((error) => res.status(400).send(error));
