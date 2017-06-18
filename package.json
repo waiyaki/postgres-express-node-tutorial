@@ -14,9 +14,9 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
-    "pg": "^6.0.2",
+    "pg": "^6.2.4",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.23.4"
+    "sequelize": "^4.1.0"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
