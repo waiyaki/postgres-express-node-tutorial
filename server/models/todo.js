@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     Todo.hasMany(models.TodoItem, {
       foreignKey: 'todoId',
       as: 'todoItems',
+      onDelete: 'CASCADE',
     });
   };
   return Todo;
