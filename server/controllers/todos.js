@@ -29,7 +29,7 @@ module.exports = {
 
   retrieve(req, res) {
     return Todo
-      .findById(req.params.todoId, {
+      .findByPk(req.params.todoId, {
         include: [{
           model: TodoItem,
           as: 'todoItems',
@@ -48,7 +48,7 @@ module.exports = {
 
   update(req, res) {
     return Todo
-      .findById(req.params.todoId, {
+      .findByPk(req.params.todoId, {
         include: [{
           model: TodoItem,
           as: 'todoItems',
@@ -72,7 +72,7 @@ module.exports = {
 
   destroy(req, res) {
     return Todo
-      .findById(req.params.todoId)
+      .findByPk(req.params.todoId)
       .then(todo => {
         if (!todo) {
           return res.status(400).send({
