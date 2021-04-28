@@ -1,8 +1,9 @@
 const Todo = require('../models').Todo;
 const TodoItem = require('../models').TodoItem;
-
+const httpErrors = require('http-errors');
 module.exports = {
   create(req, res) {
+    if (!req.body.title) return next(httpErrors(404, 'Title not found'));
     return Todo
       .create({
         title: req.body.title,
@@ -29,7 +30,7 @@ module.exports = {
 
   retrieve(req, res) {
     return Todo
-      .findById(req.params.todoId, {
+      .findByPk(req.params.todoId, {
         include: [{
           model: TodoItem,
           as: 'todoItems',
@@ -48,7 +49,7 @@ module.exports = {
 
   update(req, res) {
     return Todo
-      .findById(req.params.todoId, {
+      .findByPk(req.params.todoId, {
         include: [{
           model: TodoItem,
           as: 'todoItems',
@@ -72,7 +73,7 @@ module.exports = {
 
   destroy(req, res) {
     return Todo
-      .findById(req.params.todoId)
+      .findByPk(req.params.todoId)
       .then(todo => {
         if (!todo) {
           return res.status(400).send({

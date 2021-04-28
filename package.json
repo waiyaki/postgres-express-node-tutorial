@@ -13,10 +13,15 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "express-jwt": "^6.0.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.7.0",
+    "passport": "^0.4.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
